@@ -14,7 +14,8 @@ export default {
 			/**
 			 * @type {string[]}
 			 */
-			todos: ['abc', 'xyz', 'haha'],
+			// todos: ['abc', 'xyz', 'haha'],
+			todos: [],
 		}
 	},
 	methods: {

@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<TodoListItem v-for="(item, i) in todos" :key="i + item" :item="item" />
+		<div v-if="todos.length === 0" class="empty-placeholder">No items</div>
+		<template v-else>
+			<TodoListItem v-for="(item, i) in todos" :key="i + item" :item="item" />
+		</template>
 	</div>
 </template>
 
@@ -22,4 +25,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.empty-placeholder {
+	text-align: center;
+	padding: 1em;
+	color: hsl(0, 0%, 80%);
+}
+</style>
