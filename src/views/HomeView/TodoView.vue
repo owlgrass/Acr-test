@@ -12,7 +12,7 @@ export default {
 	data() {
 		return {
 			/**
-			 * @type {string[]}
+			 * @type {Array<{ content: String, checked: Boolean }>}
 			 */
 			todos: [],
 		}

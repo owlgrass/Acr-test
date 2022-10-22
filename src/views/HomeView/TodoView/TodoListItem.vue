@@ -1,7 +1,7 @@
 <template>
 	<div class="todo-list-item">
 		<el-checkbox v-model="checked">
-			{{ item }}
+			{{ item.content }}
 		</el-checkbox>
 		<el-button type="text" icon="el-icon-close" @click="remove" />
 	</div>
@@ -11,7 +11,7 @@
 export default {
 	props: {
 		item: {
-			type: String,
+			type: Object,
 		},
 	},
 	data() {

@@ -21,7 +21,10 @@ export default {
 	},
 	methods: {
 		add() {
-			this.$emit('add', this.input)
+			this.$emit('add', {
+				content: this.input,
+				checked: false,
+			})
 			this.input = ''
 		},
 	},
