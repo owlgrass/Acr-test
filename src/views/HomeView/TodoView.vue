@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<TodoAdd @add="add" />
-		<TodoList :todos="todos" />
+		<TodoList :todos="todos" @remove="remove" />
 	</div>
 </template>
 
@@ -21,6 +21,9 @@ export default {
 	methods: {
 		add(item) {
 			this.todos.push(item)
+		},
+		remove(index) {
+			this.todos.splice(index, 1)
 		},
 	},
 	components: {
