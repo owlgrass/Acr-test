@@ -1,13 +1,24 @@
 <template>
-	<div>TODO: TodoList</div>
+	<div>
+		<TodoListItem v-for="(item, i) in todos" :key="i + item" :item="item" />
+	</div>
 </template>
 
 <script>
+import TodoListItem from './TodoListItem'
+
 export default {
+	props: {
+		todos: {
+			type: Array,
+		},
+	},
 	data() {
 		return {}
 	},
-	components: {},
+	components: {
+		TodoListItem,
+	},
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
 	<div class="home-view">
-		<TodoAdd />
-		<TodoList />
+		<TodoAdd @add="add" />
+		<TodoList :todos="todos" />
 	</div>
 </template>
 
@@ -14,8 +14,13 @@ export default {
 			/**
 			 * @type {string[]}
 			 */
-			todos: [],
+			todos: ['abc', 'xyz', 'haha'],
 		}
+	},
+	methods: {
+		add(item) {
+			this.todos.push(item)
+		},
 	},
 	components: {
 		TodoAdd,
