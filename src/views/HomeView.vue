@@ -1,31 +1,14 @@
 <template>
 	<div class="home-view">
-		<TodoAdd @add="add" />
-		<TodoList :todos="todos" />
+		<TodoView />
 	</div>
 </template>
 
 <script>
-import TodoAdd from './HomeView/TodoAdd'
-import TodoList from './HomeView/TodoList'
+import TodoView from './HomeView/TodoView'
 export default {
-	data() {
-		return {
-			/**
-			 * @type {string[]}
-			 */
-			// todos: ['abc', 'xyz', 'haha'],
-			todos: [],
-		}
-	},
-	methods: {
-		add(item) {
-			this.todos.push(item)
-		},
-	},
 	components: {
-		TodoAdd,
-		TodoList,
+		TodoView,
 	},
 }
 </script>
