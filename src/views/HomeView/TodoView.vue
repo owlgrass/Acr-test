@@ -14,7 +14,6 @@ export default {
 			/**
 			 * @type {string[]}
 			 */
-			// todos: ['abc', 'xyz', 'haha'],
 			todos: [],
 		}
 	},
