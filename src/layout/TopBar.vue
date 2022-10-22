@@ -15,11 +15,13 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 .top-bar {
 	max-width: $--md;
 	margin: 0 auto;
-}
-.el-menu--horizontal > .el-menu-item {
-	color: $--color-primary;
-}
-a {
-	text-decoration: inherit;
+
+	& > .el-menu--horizontal > .el-menu-item {
+		color: $--color-primary;
+
+		& > a {
+			text-decoration: inherit;
+		}
+	}
 }
 </style>
