@@ -14,8 +14,7 @@ export default {
 </script>
 
 <style lang="scss">
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
-@import '~element-ui/packages/theme-chalk/src/index';
+@import '@/theme.scss';
 
 .home-view {
 	max-width: $--md;

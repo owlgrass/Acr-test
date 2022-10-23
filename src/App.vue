@@ -13,7 +13,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import 'normalize.css';
+@import './theme.scss';
 @import './App.css';
 </style>

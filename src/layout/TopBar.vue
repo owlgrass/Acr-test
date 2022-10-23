@@ -9,8 +9,7 @@
 </template>
 
 <style lang="scss">
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
-@import '~element-ui/packages/theme-chalk/src/index';
+@import '@/theme.scss';
 
 .top-bar {
 	max-width: $--md;
