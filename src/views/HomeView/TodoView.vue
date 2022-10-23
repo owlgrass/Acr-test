@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<TodoAdd @add="add" />
-		<TodoList :todos="todos" @remove="remove" />
+		<TodoList :todos="todos" @remove="remove" @update="update" />
 	</div>
 </template>
 
@@ -23,6 +23,10 @@ export default {
 		},
 		remove(index) {
 			this.todos.splice(index, 1)
+		},
+		update(i, newValue) {
+			this.todos[i].content = newValue.content
+			this.todos[i].checked = newValue.checked
 		},
 	},
 	components: {

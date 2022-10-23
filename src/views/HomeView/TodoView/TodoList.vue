@@ -7,6 +7,9 @@
 				:key="i + item"
 				:item="item"
 				@remove="remove(i)"
+				@check="
+					(checked) => $emit('update', i, { content: item.content, checked })
+				"
 			/>
 		</template>
 	</div>

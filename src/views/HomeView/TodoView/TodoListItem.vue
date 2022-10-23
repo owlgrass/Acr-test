@@ -14,10 +14,15 @@ export default {
 			type: Object,
 		},
 	},
-	data() {
-		return {
-			checked: false, // TODO
-		}
+	computed: {
+		checked: {
+			get() {
+				return this.item.checked
+			},
+			set(v) {
+				this.$emit('check', v)
+			},
+		},
 	},
 	methods: {
 		remove() {
