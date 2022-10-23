@@ -12,12 +12,16 @@
 @import '@/theme.scss';
 
 .top-bar {
+	border-bottom: 1px solid $--color-secondary;
+}
+
+.el-menu.el-menu--horizontal {
 	max-width: $--md;
 	margin: 0 auto;
+	border: none;
 
-	& > .el-menu--horizontal > .el-menu-item {
+	& > .el-menu-item {
 		color: $--color-primary;
-
 		& > a {
 			text-decoration: inherit;
 		}

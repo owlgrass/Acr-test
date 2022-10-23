@@ -32,11 +32,17 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '@/theme.scss';
+
 .el-input {
 	margin-right: 1em;
 }
 .todo-add {
 	display: flex;
+
+	padding: 1em;
+	margin-bottom: -1px;
+	border: 1px solid $--color-secondary;
 }
 </style>

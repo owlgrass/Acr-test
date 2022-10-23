@@ -32,12 +32,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '@/theme.scss';
+
 .todo-list-item {
 	display: flex;
 	justify-content: space-between;
 
 	padding: 1em;
+	margin-bottom: -1px;
+	border: 1px solid $--color-secondary;
+
+	&:hover {
+		background: $--color-primary-light-9;
+	}
 }
 .el-button.el-button--text {
 	padding: 0;
