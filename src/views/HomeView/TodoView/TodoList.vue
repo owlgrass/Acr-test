@@ -38,10 +38,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .empty-placeholder {
 	text-align: center;
 	padding: 1em;
 	color: hsl(0, 0%, 80%);
+	font-size: 14px;
 }
 </style>

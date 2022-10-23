@@ -8,7 +8,7 @@
 	</div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import '@/theme.scss';
 
 .top-bar {
