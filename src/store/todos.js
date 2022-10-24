@@ -3,7 +3,6 @@ const state = {
 }
 const getters = {
 	getTodos(state) {
-		console.log('haha get')
 		return state.todos
 	},
 }
@@ -15,7 +14,6 @@ const mutations = {
 		todos.splice(index, 1)
 	},
 	UPDATE({ todos }, { index, newValue }) {
-		console.log('hhh', newValue)
 		todos[index].content = newValue.content
 		todos[index].checked = newValue.checked
 	},
