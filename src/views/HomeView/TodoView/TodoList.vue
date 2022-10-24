@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-if="todos.length === 0" class="empty-placeholder">No items</div>
+		<EmptyPlaceholder v-if="todos.length === 0" />
 		<template v-else>
 			<TodoListItem
 				v-for="(item, i) in todos"
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import EmptyPlaceholder from './EmptyPlaceholder'
 import TodoListItem from './TodoListItem'
 
 export default {
@@ -38,23 +39,10 @@ export default {
 		},
 	},
 	components: {
+		EmptyPlaceholder,
 		TodoListItem,
 	},
 }
 </script>
 
-<style scoped lang="scss">
-@import '@/theme.scss';
-
-.empty-placeholder {
-	text-align: center;
-	padding: 1em;
-
-	background: $--color-white;
-	border: 1px solid $--color-secondary;
-	border-radius: 0 0 $--border-radius-base $--border-radius-base;
-
-	color: hsl(0, 0%, 80%);
-	font-size: $--font-size-base;
-}
-</style>
+<style scoped lang="scss"></style>
