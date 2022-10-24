@@ -1,11 +1,12 @@
 <template>
 	<div class="todo-view">
 		<TodoAdd @add="add" />
-		<TodoList :todos="todos" @remove="remove" @update="update" />
+		<TodoList :todos="getTodos" @remove="remove" @update="update" />
 	</div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import TodoAdd from './TodoView/TodoAdd'
 import TodoList from './TodoView/TodoList'
 export default {
@@ -18,16 +19,10 @@ export default {
 		}
 	},
 	methods: {
-		add(item) {
-			this.todos.push(item)
-		},
-		remove(index) {
-			this.todos.splice(index, 1)
-		},
-		update(index, newValue) {
-			this.todos[index].content = newValue.content
-			this.todos[index].checked = newValue.checked
-		},
+		...mapActions(['add', 'remove', 'update']),
+	},
+	computed: {
+		...mapGetters(['getTodos']),
 	},
 	components: {
 		TodoAdd,

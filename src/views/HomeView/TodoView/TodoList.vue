@@ -7,9 +7,7 @@
 				:key="i + item"
 				:item="item"
 				@remove="remove(i)"
-				@check="
-					(checked) => $emit('update', i, { content: item.content, checked })
-				"
+				@check="(e) => check(i, e)"
 			/>
 		</template>
 	</div>
@@ -30,6 +28,13 @@ export default {
 	methods: {
 		remove(index) {
 			this.$emit('remove', index)
+		},
+		check(index, checked) {
+			const newValue = {
+				content: this.todos[index].content,
+				checked,
+			}
+			this.$emit('update', { index, newValue })
 		},
 	},
 	components: {
