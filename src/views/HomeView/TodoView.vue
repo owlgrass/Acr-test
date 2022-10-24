@@ -36,10 +36,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-@import '@/theme.scss';
-
-.todo-view {
-	// background: $--color-white;
-}
-</style>
+<style scoped lang="scss"></style>
