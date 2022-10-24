@@ -2,7 +2,7 @@ const state = {
 	/**
 	 * @type {Array<{ content: String, checked: Boolean }>}
 	 */
-	_todos: [{ content: 'Hello-state', checked: false }],
+	_todos: [],
 }
 const getters = {
 	todos(state) {
