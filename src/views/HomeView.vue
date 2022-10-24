@@ -20,7 +20,7 @@ export default {
 	padding: 1em 3em;
 
 	& > div {
-		max-width: $--md;
+		max-width: $--sm;
 		margin: 0 auto;
 	}
 }

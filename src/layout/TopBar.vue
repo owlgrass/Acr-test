@@ -17,7 +17,7 @@
 }
 
 .el-menu.el-menu--horizontal {
-	max-width: $--md;
+	max-width: $--sm;
 	margin: 0 auto;
 	border: none;
 
