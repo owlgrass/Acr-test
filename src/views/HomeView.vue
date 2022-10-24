@@ -17,9 +17,11 @@ export default {
 @import '@/theme.scss';
 
 .home-view {
-	max-width: $--md;
-	margin: 0 auto;
-
 	padding: 1em 3em;
+
+	& > div {
+		max-width: $--md;
+		margin: 0 auto;
+	}
 }
 </style>

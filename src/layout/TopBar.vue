@@ -13,6 +13,7 @@
 
 .top-bar {
 	border-bottom: 1px solid $--color-secondary;
+	background: $--color-white;
 }
 
 .el-menu.el-menu--horizontal {

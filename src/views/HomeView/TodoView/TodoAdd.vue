@@ -37,6 +37,10 @@ export default {
 
 .el-input {
 	margin-right: 1em;
+
+	&::v-deep > .el-input__inner {
+		border: 1px solid $--color-secondary;
+	}
 }
 .todo-add {
 	display: flex;
@@ -44,5 +48,7 @@ export default {
 	padding: 1em;
 	margin-bottom: -1px;
 	border: 1px solid $--color-secondary;
+	border-radius: $--border-radius-base $--border-radius-base 0 0;
+	background: $--color-white;
 }
 </style>

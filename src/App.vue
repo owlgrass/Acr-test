@@ -16,5 +16,5 @@ export default {
 <style lang="scss">
 @import 'normalize.css';
 @import './theme.scss';
-@import './App.css';
+@import './App.scss';
 </style>

@@ -42,9 +42,13 @@ export default {
 	padding: 1em;
 	margin-bottom: -1px;
 	border: 1px solid $--color-secondary;
+	background: $--color-white;
 
 	&:hover {
 		background: $--color-primary-light-9;
+	}
+	&:last-child {
+		border-radius: 0 0 $--border-radius-base $--border-radius-base;
 	}
 }
 .el-button.el-button--text {

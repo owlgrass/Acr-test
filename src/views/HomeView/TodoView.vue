@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="todo-view">
 		<TodoAdd @add="add" />
 		<TodoList :todos="todos" @remove="remove" @update="update" />
 	</div>
@@ -35,3 +35,11 @@ export default {
 	},
 }
 </script>
+
+<style scoped lang="scss">
+@import '@/theme.scss';
+
+.todo-view {
+	// background: $--color-white;
+}
+</style>
