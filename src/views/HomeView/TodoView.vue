@@ -1,6 +1,7 @@
 <template>
 	<div class="todo-view">
 		<TodoAdd @add="add" />
+
 		<EmptyPlaceholder v-if="todos.length === 0" />
 		<template v-else>
 			<TodoListItem
