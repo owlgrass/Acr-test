@@ -24,9 +24,9 @@ export default {
 		remove(index) {
 			this.todos.splice(index, 1)
 		},
-		update(i, newValue) {
-			this.todos[i].content = newValue.content
-			this.todos[i].checked = newValue.checked
+		update(index, newValue) {
+			this.todos[index].content = newValue.content
+			this.todos[index].checked = newValue.checked
 		},
 	},
 	components: {
