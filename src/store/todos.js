@@ -1,21 +1,24 @@
 const state = {
-	todos: [{ content: 'Hello-state', checked: false }],
+	/**
+	 * @type {Array<{ content: String, checked: Boolean }>}
+	 */
+	_todos: [{ content: 'Hello-state', checked: false }],
 }
 const getters = {
-	getTodos(state) {
-		return state.todos
+	todos(state) {
+		return state._todos
 	},
 }
 const mutations = {
-	ADD({ todos }, item) {
-		todos.push(item)
+	ADD(state, item) {
+		state._todos.push(item)
 	},
-	REMOVE({ todos }, index) {
-		todos.splice(index, 1)
+	REMOVE(state, index) {
+		state._todos.splice(index, 1)
 	},
-	UPDATE({ todos }, { index, newValue }) {
-		todos[index].content = newValue.content
-		todos[index].checked = newValue.checked
+	UPDATE(state, { index, newValue }) {
+		state._todos[index].content = newValue.content
+		state._todos[index].checked = newValue.checked
 	},
 }
 
