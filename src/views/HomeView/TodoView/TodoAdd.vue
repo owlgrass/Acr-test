@@ -49,20 +49,6 @@ export default {
 <style scoped lang="scss">
 @import '@/theme.scss';
 
-.input {
-	margin-right: 1em;
-
-	flex-grow: 1;
-}
-.el-input {
-	&::v-deep > .el-input__inner {
-		border: 1px solid $--color-secondary;
-	}
-}
-.error-message {
-	color: $--color-danger;
-	font-size: 0.8em;
-}
 .todo-add {
 	display: flex;
 	align-items: flex-start;
@@ -72,5 +58,18 @@ export default {
 	border: 1px solid $--color-secondary;
 	border-radius: $--border-radius-base $--border-radius-base 0 0;
 	background: $--color-white;
+}
+
+.input {
+	margin-right: 1em;
+
+	flex-grow: 1;
+}
+.el-input::v-deep > .el-input__inner {
+	border: 1px solid $--color-secondary;
+}
+.error-message {
+	color: $--color-danger;
+	font-size: 0.8em;
 }
 </style>
