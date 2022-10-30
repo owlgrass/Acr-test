@@ -9,15 +9,22 @@ localVue.use(Vuex)
 localVue.use(ElementUI)
 
 describe('TodoView.vue', () => {
-	it('renders todo list with 0 items', () => {
-		const wrapper = mount(TodoView, {
+	let wrapper
+	beforeEach(() => {
+		wrapper = mount(TodoView, {
 			localVue,
 			store,
 		})
+	})
+	afterEach(() => {
+		wrapper.destroy()
+	})
+
+	it('renders todo list with 0 items', () => {
 		expect(wrapper.text()).toMatch('No items')
 	})
 
-	it('renders todo list with 1 or more items', () => {
+	it('renders todo list with 1 or more items', async () => {
 		store.dispatch('add', {
 			content: 'this is the first item',
 			checked: true,
@@ -26,10 +33,7 @@ describe('TodoView.vue', () => {
 			content: 'this is the second item',
 			checked: true,
 		})
-		const wrapper = mount(TodoView, {
-			localVue,
-			store,
-		})
+		await wrapper.vm.$nextTick()
 		expect(wrapper.text()).toMatch('this is the first item')
 		expect(wrapper.text()).toMatch('this is the second item')
 	})
