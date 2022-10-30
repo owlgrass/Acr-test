@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoView.vue renders todo list with 1 or more items (Snapshot) 1`] = `
+<div
+  class="todo-view"
+>
+  <div
+    class="todo-add"
+  >
+    <div
+      class="el-input"
+    >
+      <!---->
+      <input
+        autocomplete="off"
+        class="el-input__inner"
+        placeholder="Enter a todo item..."
+        type="text"
+      />
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+    </div>
+     
+    <button
+      class="el-button el-button--primary"
+      type="button"
+    >
+      <!---->
+      <!---->
+      <span>
+        Add
+      </span>
+    </button>
+  </div>
+   
+  <div
+    class="todo-list-item"
+  >
+    <label
+      class="el-checkbox is-checked"
+    >
+      <span
+        class="el-checkbox__input is-checked"
+      >
+        <span
+          class="el-checkbox__inner"
+        />
+        <input
+          aria-hidden="false"
+          class="el-checkbox__original"
+          type="checkbox"
+          value=""
+        />
+      </span>
+      <span
+        class="el-checkbox__label"
+      >
+        
+		this is the first item
+	
+        <!---->
+      </span>
+    </label>
+     
+    <button
+      class="el-button el-button--text"
+      type="button"
+    >
+      <!---->
+      <i
+        class="el-icon-close"
+      />
+      <!---->
+    </button>
+  </div>
+  <div
+    class="todo-list-item"
+  >
+    <label
+      class="el-checkbox"
+    >
+      <span
+        class="el-checkbox__input"
+      >
+        <span
+          class="el-checkbox__inner"
+        />
+        <input
+          aria-hidden="false"
+          class="el-checkbox__original"
+          type="checkbox"
+          value=""
+        />
+      </span>
+      <span
+        class="el-checkbox__label"
+      >
+        
+		this is the second item
+	
+        <!---->
+      </span>
+    </label>
+     
+    <button
+      class="el-button el-button--text"
+      type="button"
+    >
+      <!---->
+      <i
+        class="el-icon-close"
+      />
+      <!---->
+    </button>
+  </div>
+</div>
+`;

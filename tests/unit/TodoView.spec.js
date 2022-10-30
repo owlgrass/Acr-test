@@ -43,4 +43,26 @@ describe('TodoView.vue', () => {
 		expect(wrapper.text()).toMatch('this is the first item')
 		expect(wrapper.text()).toMatch('this is the second item')
 	})
+
+	it('renders todo list with 1 or more items (Snapshot)', () => {
+		const store = new Vuex.Store({
+			getters: {
+				todos() {
+					return [
+						{
+							content: 'this is the first item',
+							checked: true,
+						},
+						{
+							content: 'this is the second item',
+							checked: false,
+						},
+					]
+				},
+			},
+		})
+		const wrapper = mount(TodoView, { localVue, store })
+
+		expect(wrapper.element).toMatchSnapshot()
+	})
 })
